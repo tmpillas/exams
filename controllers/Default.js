@@ -3,7 +3,7 @@
 var utils = require('../utils/writer.js');
 var Default = require('../service/DefaultService');
 
-module.exports.postsGET = function postsGET (req, res, next) {
+module.exports.postsGET = function postsGET (_, res, __) {
   Default.postsGET()
     .then(function (response) {
       utils.writeJson(res, response);
@@ -13,7 +13,7 @@ module.exports.postsGET = function postsGET (req, res, next) {
     });
 };
 
-module.exports.postsPOST = function postsPOST (req, res, next, body) {
+module.exports.postsPOST = function postsPOST (_, res, __, body) {
   Default.postsPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -23,7 +23,7 @@ module.exports.postsPOST = function postsPOST (req, res, next, body) {
     });
 };
 
-module.exports.postsPostIdCommentsGET = function postsPostIdCommentsGET (req, res, next, postId) {
+module.exports.postsPostIdCommentsGET = function postsPostIdCommentsGET (_, res, __, postId) {
   Default.postsPostIdCommentsGET(postId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -33,7 +33,7 @@ module.exports.postsPostIdCommentsGET = function postsPostIdCommentsGET (req, re
     });
 };
 
-module.exports.postsPostIdCommentsPOST = function postsPostIdCommentsPOST (req, res, next, body, postId) {
+module.exports.postsPostIdCommentsPOST = function postsPostIdCommentsPOST (_, res, __, body, postId) {
   Default.postsPostIdCommentsPOST(body, postId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -43,7 +43,7 @@ module.exports.postsPostIdCommentsPOST = function postsPostIdCommentsPOST (req, 
     });
 };
 
-module.exports.postsPostIdDELETE = function postsPostIdDELETE (req, res, next, postId) {
+module.exports.postsPostIdDELETE = function postsPostIdDELETE (_, res, __, postId) {
   Default.postsPostIdDELETE(postId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -53,7 +53,7 @@ module.exports.postsPostIdDELETE = function postsPostIdDELETE (req, res, next, p
     });
 };
 
-module.exports.postsPostIdGET = function postsPostIdGET (req, res, next, postId) {
+module.exports.postsPostIdGET = function postsPostIdGET (_, res, __, postId) {
   Default.postsPostIdGET(postId)
     .then(function (response) {
       utils.writeJson(res, response);
@@ -63,7 +63,7 @@ module.exports.postsPostIdGET = function postsPostIdGET (req, res, next, postId)
     });
 };
 
-module.exports.postsPostIdPUT = function postsPostIdPUT (req, res, next, body, postId) {
+module.exports.postsPostIdPUT = function postsPostIdPUT (_, res, __, body, postId) {
   Default.postsPostIdPUT(body, postId)
     .then(function (response) {
       utils.writeJson(res, response);

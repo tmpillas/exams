@@ -7,7 +7,7 @@
  * returns List
  **/
 exports.postsGET = function() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve, _) {
     var examples = {};
     examples['application/json'] = [ {
   "id" : 0,
@@ -33,8 +33,8 @@ exports.postsGET = function() {
  * body Post 
  * returns Post
  **/
-exports.postsPOST = function(body) {
-  return new Promise(function(resolve, reject) {
+exports.postsPOST = function(_) {
+  return new Promise(function(resolve, _) {
     var examples = {};
     examples['application/json'] = {
   "id" : 0,
@@ -56,8 +56,8 @@ exports.postsPOST = function(body) {
  * postId Long 
  * returns List
  **/
-exports.postsPostIdCommentsGET = function(postId) {
-  return new Promise(function(resolve, reject) {
+exports.postsPostIdCommentsGET = function(_) {
+  return new Promise(function(resolve, _) {
     var examples = {};
     examples['application/json'] = [ {
   "id" : 0,
@@ -84,8 +84,8 @@ exports.postsPostIdCommentsGET = function(postId) {
  * postId Long 
  * returns Comment
  **/
-exports.postsPostIdCommentsPOST = function(body,postId) {
-  return new Promise(function(resolve, reject) {
+exports.postsPostIdCommentsPOST = function(_,__) {
+  return new Promise(function(resolve, _) {
     var examples = {};
     examples['application/json'] = {
   "id" : 0,
@@ -107,8 +107,8 @@ exports.postsPostIdCommentsPOST = function(body,postId) {
  * postId Long 
  * no response value expected for this operation
  **/
-exports.postsPostIdDELETE = function(postId) {
-  return new Promise(function(resolve, reject) {
+exports.postsPostIdDELETE = function(_) {
+  return new Promise(function(resolve, _) {
     resolve();
   });
 }
@@ -120,8 +120,8 @@ exports.postsPostIdDELETE = function(postId) {
  * postId Long 
  * returns Post
  **/
-exports.postsPostIdGET = function(postId) {
-  return new Promise(function(resolve, reject) {
+exports.postsPostIdGET = function(_) {
+  return new Promise(function(resolve, _) {
     var examples = {};
     examples['application/json'] = {
   "id" : 0,
@@ -144,8 +144,8 @@ exports.postsPostIdGET = function(postId) {
  * postId Long 
  * returns Post
  **/
-exports.postsPostIdPUT = function(body,postId) {
-  return new Promise(function(resolve, reject) {
+exports.postsPostIdPUT = function(_,__) {
+  return new Promise(function(resolve, _) {
     var examples = {};
     examples['application/json'] = {
   "id" : 0,
