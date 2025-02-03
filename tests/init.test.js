@@ -52,8 +52,31 @@ test("GET /posts/{postId}/comments - Should return post comments", async (t) => 
     t.is(headers["content-type"], "application/json"); // The content-type should be JSON
 });
 
+// Test case for deleting a post by postId
 test("DELETE /posts/{postId} - Should delete a post", async (t) => {
     const postId = 0;
     const {statusCode} = await t.context.got.delete(`posts/${postId}`);
     t.is(statusCode, 200, "Response status should be 200");
 });
+
+//Test case for editing a post by postId
+test("PUT /posts/{postId} - Should edit a post", async (t) => {
+    const postId = 1;
+    const {body, statusCode} = await t.context.got.put(`posts/${postId}`, {json: {postId:1}});
+    t.is(statusCode, 200, "Response status should be 200");
+    t.truthy(body, "Response body should not be empty");
+  });
+
+// dummy data
+  const PostData = {
+    id: 1,
+    title: "title",
+    "content": "content"
+}
+  //Test case for creating a post  
+  test("POST /posts", async (t) => {
+    const{headers, statusCode, body} = await t.context.got.post(`posts`, {json: PostData, responseType: 'json'});
+    t.is(statusCode, 200, "Response status should be 200");
+    t.is(headers["content-type"], "application/json"); // The content-type should be JSON
+    t.is(body.title, PostData.title, "Title should match");
+  });

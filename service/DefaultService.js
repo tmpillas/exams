@@ -18,6 +18,7 @@ exports.postsGET = function() {
   "title" : "title",
   "content" : "content"
 } ];
+// Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -41,6 +42,7 @@ exports.postsPOST = function(_) {
   "title" : "title",
   "content" : "content"
 };
+// Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -68,6 +70,7 @@ exports.postsPostIdCommentsGET = function(_) {
   "postId" : 6,
   "text" : "text"
 } ];
+// Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -92,6 +95,7 @@ exports.postsPostIdCommentsPOST = function(_,__) {
   "postId" : 6,
   "text" : "text"
 };
+// Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -128,6 +132,7 @@ exports.postsPostIdGET = function(_) {
   "title" : "title",
   "content" : "content"
 };
+// Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -152,6 +157,7 @@ exports.postsPostIdPUT = function(_,__) {
   "title" : "title",
   "content" : "content"
 };
+// Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
